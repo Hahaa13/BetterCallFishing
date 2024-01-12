@@ -4,6 +4,7 @@ main: xyz.sherhsnyaga.bettercallfishing.BetterCallFishing
 api-version: '1.16'
 load: STARTUP
 authors: [ Shershnyaga_ ]
+softdepend: [ItemsAdder]
 website: shershnyaga.xyz
 commands:
   bettercallfishing:
