@@ -41,8 +41,6 @@ public class BarrelConfig {
             int minCount = config.getInt("barrel-items." + key + ".min-count");
             int maxCount = config.getInt("barrel-items." + key + ".max-count");
             ItemSettings settings = null;
-            Bukkit.getLogger().info(key);
-            if(key.startsWith("IA:")) Bukkit.getLogger().info(""+CustomStack.isInRegistry(key.replaceAll("IA:", "")));
             if(iaEnable && key.startsWith("IA:") && CustomStack.isInRegistry(key.replaceAll("IA:", ""))){
                 settings = new ItemSettings(CustomStack.getInstance(key.replaceAll("IA:", "")).getItemStack(), chance, minCount, maxCount, 0);
             }else if(!key.startsWith("IA:")){
@@ -63,7 +61,7 @@ public class BarrelConfig {
         List<ItemSettings> itemSettings = new ArrayList<>();
 
         for (ItemSettings i: itemSettingsList)
-            if(i!=null) itemSettings.add(new ItemSettings(i.item, i.chance, i.minCount, i.maxCount, 0));
+            itemSettings.add(new ItemSettings(i.item, i.chance, i.minCount, i.maxCount, 0));
 
         while (!slotList.isEmpty()) {
             int index = random.nextInt(slotList.size());
