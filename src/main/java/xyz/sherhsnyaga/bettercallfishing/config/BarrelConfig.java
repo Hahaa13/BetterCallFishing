@@ -61,7 +61,7 @@ public class BarrelConfig {
         List<ItemSettings> itemSettings = new ArrayList<>();
 
         for (ItemSettings i: itemSettingsList)
-            itemSettings.add(new ItemSettings(i.item, i.chance, i.minCount, i.maxCount, 0));
+            if(i!=null) itemSettings.add(new ItemSettings(i.item, i.chance, i.minCount, i.maxCount, 0));
 
         while (!slotList.isEmpty()) {
             int index = random.nextInt(slotList.size());
