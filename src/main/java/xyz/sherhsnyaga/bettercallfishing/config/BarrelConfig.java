@@ -43,7 +43,7 @@ public class BarrelConfig {
             ItemSettings settings = null;
             if(iaEnable && key.startsWith("IA:") && CustomStack.isInRegistry(key.replace("IA:", ""))){
                 settings = new ItemSettings(CustomStack.getInstance(key.replace("IA:", "")).getItemStack(), chance, minCount, maxCount, 0);
-            }else{
+            }else if(!key.startsWith("IA:")){
                 settings = new ItemSettings(new ItemStack(Material.getMaterial(key)), chance, minCount, maxCount, 0);
             }
             itemSettingsList.add(settings);
