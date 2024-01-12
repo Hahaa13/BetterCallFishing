@@ -1,7 +1,6 @@
 package xyz.sherhsnyaga.bettercallfishing;
 
 import lombok.Getter;
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;

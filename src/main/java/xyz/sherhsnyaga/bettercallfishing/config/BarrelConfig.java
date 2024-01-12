@@ -5,11 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import xyz.sherhsnyaga.bettercallfishing.utils.IA_Hook;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import dev.lone.itemsadder.api.CustomStack;
