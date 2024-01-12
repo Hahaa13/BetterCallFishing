@@ -48,7 +48,7 @@ public class BarrelConfig {
             }else if(!key.startsWith("IA:")){
                 settings = new ItemSettings(new ItemStack(Material.getMaterial(key)), chance, minCount, maxCount, 0);
             }
-            itemSettingsList.add(settings);
+            if(settings!=null) itemSettingsList.add(settings);
         }
     }
 
